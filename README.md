@@ -1,6 +1,6 @@
 # Fabio D'Anna Portfolio Website
 
-Personal portfolio website for Fabio D'Anna, an IT and Software Development graduate transitioning into web development, software development and IT support.
+TechGnomo is a personal portfolio website for Fabio D'Anna, an IT and Software Development graduate transitioning into web development, software development and IT support.
 
 This website presents my background, skills, resume and portfolio projects in a clean, responsive and professional format.
 

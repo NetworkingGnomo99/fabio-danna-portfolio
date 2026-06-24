@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Budget Planner App | Fabio D'Anna</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">Portfolio Project</p>
+      <h1>Budget Planner App</h1>
+      <p class="subtitle">
+        A weekly finance planner to track income, expenses, bills, debt payments and savings goals.
+      </p>
+    </div>
+
+    <a href="../project.html" class="back-link">Back to Portfolio</a>
+  </header>
+
+  <main class="app-shell">
+
+    <!-- SUMMARY -->
+    <section class="summary-grid">
+
+      <article class="summary-card">
+        <span>Total Income</span>
+        <strong id="totalIncome">$0.00</strong>
+      </article>
+
+      <article class="summary-card">
+        <span>Total Expenses</span>
+        <strong id="totalExpenses">$0.00</strong>
+      </article>
+
+      <article class="summary-card">
+        <span>Balance</span>
+        <strong id="balance">$0.00</strong>
+      </article>
+
+      <article class="summary-card">
+        <span>Savings Progress</span>
+        <strong id="savingsProgress">0%</strong>
+      </article>
+
+    </section>
+
+    <!-- INPUT AREA -->
+    <section class="planner-grid">
+
+      <!-- WEEK SETTINGS -->
+      <article class="panel">
+        <h2>Week Setup</h2>
+
+        <div class="form-group">
+          <label for="weekName">Week Name</label>
+          <input type="text" id="weekName" placeholder="Example: 01 Jul → 07 Jul" />
+        </div>
+
+        <div class="form-group">
+          <label for="savingGoal">Savings Goal</label>
+          <input type="number" id="savingGoal" placeholder="Example: 400" />
+        </div>
+
+        <button id="saveWeekBtn" class="btn btn-primary">Save Week</button>
+      </article>
+
+      <!-- ADD TRANSACTION -->
+      <article class="panel">
+        <h2>Add Transaction</h2>
+
+        <div class="form-group">
+          <label for="transactionName">Name</label>
+          <input type="text" id="transactionName" placeholder="Example: Rent, Fuel, Paycheck" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="transactionAmount">Amount</label>
+            <input type="number" id="transactionAmount" placeholder="0.00" />
+          </div>
+
+          <div class="form-group">
+            <label for="transactionType">Type</label>
+            <select id="transactionType">
+              <option value="income">Income</option>
+              <option value="expense">Expense</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="transactionCategory">Category</label>
+          <select id="transactionCategory">
+            <option value="Income">Income</option>
+            <option value="Rent">Rent</option>
+            <option value="Fuel">Fuel</option>
+            <option value="Groceries">Groceries</option>
+            <option value="Phone">Phone</option>
+            <option value="Rego">Rego</option>
+            <option value="Insurance">Insurance</option>
+            <option value="Loan">Loan</option>
+            <option value="Debt">Debt</option>
+            <option value="Savings">Savings</option>
+            <option value="Fun">Fun</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <button id="addTransactionBtn" class="btn btn-primary">Add Transaction</button>
+      </article>
+
+    </section>
+
+    <!-- CURRENT WEEK -->
+    <section class="panel">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">Current Week</p>
+          <h2 id="currentWeekTitle">No week saved yet</h2>
+        </div>
+
+        <button id="resetBtn" class="btn btn-danger">Reset All</button>
+      </div>
+
+      <div class="progress-wrapper">
+        <div class="progress-top">
+          <span>Saving Goal Progress</span>
+          <span id="savingGoalText">$0.00 / $0.00</span>
+        </div>
+
+        <div class="progress-bar">
+          <div id="progressFill" class="progress-fill"></div>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Type</th>
+              <th>Amount</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody id="transactionTable">
+            <tr>
+              <td colspan="5" class="empty-row">No transactions yet.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="app-footer">
+    <p>
+      Built with HTML, CSS and JavaScript. Data is saved locally in the browser using Local Storage.
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
